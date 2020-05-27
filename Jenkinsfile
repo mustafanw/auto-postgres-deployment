@@ -2,16 +2,22 @@ pipeline {
 
   agent any
   stages {
-    stage('powershell') {
+  stage('Cloning Git') {
+      steps {
+        git 'https://github.com/mustafanw/auto-postgres-deployment.git'
+      }
+    }
+    stage('Run Script') {
       steps {
                 script {
                         withPythonEnv('python3'){
                       sh 'pip install psycopg2'
-                      sh 'cd /home/ubuntuaiq/auto_postgres/auto-postgres-deployment && ./job.sh'
-                        
+                      sh './job.sh'
+
+
                     }
                 }
     }
-	}
-	}
-	}
+  }
+  }
+    }
