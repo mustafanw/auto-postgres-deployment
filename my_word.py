@@ -1,1 +1,1 @@
-print("\n\n\nThis is great news sir madam\n\n\n")
+print("\n\n\nThis is great news sir\n\n\n")
