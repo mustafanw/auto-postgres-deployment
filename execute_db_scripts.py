@@ -1,12 +1,12 @@
-# hostname = 'localhost'
-# username = 'postgres'
-# password = 'postgres'
-# database = 'sprint30'
-
-hostname = '34.194.174.76'
+hostname = 'localhost'
 username = 'postgres'
 password = 'postgres'
-database = 'aiops'
+database = 'sprint30'
+
+# hostname = '34.194.174.76'
+# username = 'postgres'
+# password = 'postgres'
+# database = 'aiops'
 
 import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -16,7 +16,7 @@ def doQuery( conn ) :
     cur = conn.cursor()
 
     # cur.execute( "CREATE TABLE public.mustafa(action_trigger character varying)" )
-    print("inside do query")
+    print("inside do query 1")
     version_file = open('devdb.version','r')
     version = version_file.read()
     print(version)
