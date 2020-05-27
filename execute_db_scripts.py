@@ -3,10 +3,6 @@ username = 'postgres'
 password = 'postgres'
 database = 'sprint30'
 
-# hostname = '34.194.174.76'
-# username = 'postgres'
-# password = 'postgres'
-# database = 'aiops'
 
 import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
