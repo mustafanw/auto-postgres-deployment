@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 posgres.py
+python3 execute_db_scripts.py

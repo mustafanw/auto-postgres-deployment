@@ -21,7 +21,7 @@ def doQuery( conn ) :
     version = version_file.read()
     print(version)
     print(dir_path)
-    sql_path = dir_path+'/sprint33/postgres_'+version+'.sql'
+    sql_path = dir_path+'/sprint33/dev/postgres_dev_'+version+'.sql'
     print(sql_path)
     sql_file = open(sql_path,'r')
     cur.execute(sql_file.read())
