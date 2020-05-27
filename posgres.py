@@ -16,6 +16,7 @@ def doQuery( conn ) :
     cur = conn.cursor()
 
     # cur.execute( "CREATE TABLE public.mustafa(action_trigger character varying)" )
+    print("inside do query")
     version_file = open('devdb.version','r')
     version = version_file.read()
     print(version)
