@@ -1,4 +1,4 @@
-hostname = '10.0.1.168'
+hostname = '34.194.174.76'
 username = 'postgres'
 password = 'postgres'
 database = 'aiops'
