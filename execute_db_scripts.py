@@ -6,7 +6,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 hostname = 'localhost'
 username = 'postgres'
 password = 'postgres'
-database = 'sprint30'
+database = 'aiops'
 
 def doQuery( conn ) :
     cur = conn.cursor()
