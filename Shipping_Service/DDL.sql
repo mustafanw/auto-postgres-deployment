@@ -1,4 +1,4 @@
-CREATE TABLE public.incident_staging_tbl_latest  (
+CREATE TABLE public.incident_staging_tbl_final  (
     incident_id character varying,
     input_data character varying,
     inserted_at bigint,
