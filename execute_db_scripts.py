@@ -13,7 +13,7 @@ def doQuery( conn ) :
 
     version_file = open('devdb.version','r')
     version = version_file.read()
-    sql_path = dir_path+'/sprint33/dev/postgres_dev_'+version+'.sql'
+    sql_path = dir_path+'/Account_Service/DDL.sql'
     sql_file = open(sql_path,'r')
     cur.execute(sql_file.read())
     conn.commit()
