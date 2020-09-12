@@ -27,29 +27,26 @@ def doQuery( conn ) :
         sprint_delta_path = dir_path+'/'+service+'/sprint_delta.sql'
         sprint_delta_file = open(sprint_delta_path,'r')
         data = sprint_delta_file.read()
-        # cur.execute(data)
-        # conn.commit()
-
+        cur.execute(data)
+        conn.commit()
         service_delta_path = dir_path+'/'+service+'/service_delta.sql'
-        f = open(service_delta_path, "a")
-        f.write(data)
-        f.write("\n--------------------------------\n\n")
-        f.close()
         version = CONFIG.get("EXECUTE_DELTA",service)
-        notes = notes + "Successfully Executed delta for " + service + " version " + version+ " at " + str(datetime.now())+"\n"
-        sprint_delta_file = open(sprint_delta_path,'w')
-        sprint_delta_file.truncate(0)
-        sprint_delta_file.close()
-    CONFIG.set("EXECUTE_DELTA","services","")
-    configfile = open(CONFIG_FILE, 'w')
-    CONFIG.write(configfile)
-    configfile.close()
-    f = open(dir_path+'/Release_Notes.txt', "a")
-    f.write(notes)
-    f.write("--------------------------------\n\n")
-    f.close()
+        with open(service_delta_path, 'r') as original: old_data = original.read()
+        with open(service_delta_path, 'w') as modified: modified.write("---Service Version "+version+"\n"+data+"\n-----\n" + old_data)
 
-# services = CONFIG['CONFIGS']['SERVICES'].split(',')
+
+        notes = notes + "Successfully Executed delta for " + service + " version " + version+ " at " + str(datetime.now())+"\n"
+        # sprint_delta_file = open(sprint_delta_path,'w')
+        # sprint_delta_file.truncate(0)
+        # sprint_delta_file.close()
+    # CONFIG.set("EXECUTE_DELTA","services","")
+    # configfile = open(CONFIG_FILE, 'w')
+    # CONFIG.write(configfile)
+    # configfile.close()
+
+    with open(dir_path+'/Release_Notes.txt', 'r') as original: data = original.read()
+    with open(dir_path+'/Release_Notes.txt', 'w') as modified: modified.write(notes+"\n-----\n" + data)
+
 services = CONFIG.get("EXECUTE_DELTA","services").split(',')
 print(services)
 print(type(services))
