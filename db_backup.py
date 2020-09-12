@@ -45,7 +45,7 @@ with open('temp_all.sql', 'w') as f:
 	# 	pg_dump('-h', 'localhost', '-U', 'postgres', '-t',table, '--column-inserts', 'sprint30', _out=f)
 	# 	print(count)
 	# 	count=count+1
-	pg_dump('-h', 'localhost', '-U', 'postgres', '--schema-only', 'sprint30', _out=f)
+	pg_dump('-h', 'localhost', '-U', 'postgres', '--schema-only', 'aiops', _out=f)
 	for key, value in table_dict.items():
 		if value=='Operational':
 			# pg_dump('-h', 'localhost', '-U', 'postgres', '-t',key, '--schema-only', 'sprint30', _out=f)
