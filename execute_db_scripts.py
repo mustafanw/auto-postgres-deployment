@@ -97,6 +97,7 @@ def run_delta_script() :
         response = "Error while executing delta scripts"
     return response
 
+
 services = CONFIG.get("EXECUTE_SCRIPTS","services").split(',')
 script_type = CONFIG.get("EXECUTE_SCRIPTS","type")
 run_script = run_delta_script() if script_type =='delta' else run_base_script()
