@@ -1,1 +1,0 @@
-INSERT INTO public.incident_staging_tbl_final(incident_id) VALUES ('INC');

@@ -1,5 +1,7 @@
-CREATE TABLE shipping_services3.test2  (
-    order_id character varying,
-    address character varying,
-    status character varying
+CREATE schema inventory_service;
+
+CREATE TABLE inventory_service.products  (
+    product_id character varying,
+    name character varying,
+    description character varying
 );

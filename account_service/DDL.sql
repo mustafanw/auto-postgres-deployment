@@ -1,7 +1,7 @@
-CREATE schema shipping_services3;
+CREATE schema account_service;
 
-CREATE TABLE shipping_services3.test1  (
-    order_id character varying,
-    address character varying,
-    status character varying
+CREATE TABLE account_service.users  (
+    user_id Serial,
+    name character varying,
+    phone character varying
 );

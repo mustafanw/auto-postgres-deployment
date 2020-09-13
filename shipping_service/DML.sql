@@ -1,0 +1,1 @@
+INSERT INTO shipping_service.Orders(product_name, quantity, price) VALUES ('iPhone 11', 1, 50000);
