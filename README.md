@@ -69,7 +69,7 @@ pipeline {
       -service_delta.sql --> This file automatically tracks whole service delta scripts.  
       
 *Refer account_service, shipping_service,inventory_service folder for above files*
--Define below four varibales in config.ini file
+- Define below four varibales in config.ini file
 ```
 [EXECUTE_SCRIPTS]
 type = base - You have to define "base" 0r "delta" in type file. "base" for executing DDL and DML scripts and "delta" for executing sprint_delta file.
