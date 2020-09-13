@@ -1,5 +1,3 @@
-
-
 CREATE schema account_service;
 
 CREATE TABLE account_service.users  (
