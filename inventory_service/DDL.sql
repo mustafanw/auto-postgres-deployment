@@ -1,6 +1,13 @@
-CREATE TABLE public.incident_staging_tbl_final  (
-    incident_id character varying,
-    input_data character varying,
-    inserted_at bigint,
-    source character varying
+CREATE schema shipping_services3;
+
+CREATE TABLE shipping_services3.test3  (
+    order_id character varying,
+    address character varying,
+    status character varying
+);
+
+CREATE TABLE shipping_services3.test4  (
+    order_id character varying,
+    address character varying,
+    status character varying
 );

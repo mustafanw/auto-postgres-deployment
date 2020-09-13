@@ -1,0 +1,8 @@
+schema "shipping_services3" already exists
+
+can't execute an empty query
+can't execute an empty query
+schema "shipping_services3" already exists
+
+can't execute an empty query
+can't execute an empty query

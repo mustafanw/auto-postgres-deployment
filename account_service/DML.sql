@@ -1,1 +1,1 @@
-INSERT INTO public.incident_staging_tbl_final(incident_id) VALUES ('INC');
+INSERT INTO shipping_services3.test1(status) VALUES ('Success');
