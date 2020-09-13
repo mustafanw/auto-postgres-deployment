@@ -1,8 +1,3 @@
----
-title: Automate Database Maintenance for Microservices with Jenkins
-tags: ['jenkins', 'database', 'maintenance', 'microservices']
-status: draft
----
 
 # Automate Database Maintenance for Microservices with Jenkins
 ***This repository contains the code for maintaining the database script automatically with Jenkins for your microservices.***
@@ -98,4 +93,39 @@ shipping_service = 1.0
 
 ![alt text](https://user-images.githubusercontent.com/24622641/93015619-80bf8e80-f5d8-11ea-8aab-876e1f5ed90c.JPG)!
 
+**Benefits**
 
+- This script can be useful if you have manual db script execution for your microservices.
+- This will reduce the manual intervention of maintaining and validating queries.
+- This will be beneficial if you have multiple client deployments and have to maintain delta for different product version deployments.
+- This will track scripts of all the services in only one repo.
+
+**Upcoming Features**
+
+- Auto execute base script DDL and DML after every script in a test database to validate all the scripts.
+- Auto database backup of all the tables except operational one.
+
+**Folder Structure**
+.
+├── account_service
+│ ├── DDL.sql
+│ ├── DML.sql
+│ ├── service_delta.sql
+│ └── sprint_delta.sql
+├── config.ini
+├── db_backup.py
+├── db_script_logs.txt
+├── execute_db_scripts.py
+├── inventory_service
+│ ├── DDL.sql
+│ ├── DML.sql
+│ ├── service_delta.sql
+│ └── sprint_delta.sql
+├── Jenkinsfile
+├── job.sh
+├── README.md
+└── shipping_service
+ ├── DDL.sql
+ ├── DML.sql
+ ├── service_delta.sql
+ └── sprint_delta.sql
