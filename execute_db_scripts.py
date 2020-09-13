@@ -33,10 +33,11 @@ def doQuery_delta() :
         # with open(sprint_delta_path, 'w') as original: original.truncate(0)
     # CONFIG.set("EXECUTE_SCRIPTS","services","")
     with open(CONFIG_FILE, 'w') as original: CONFIG.write(original)
-    with open(ROOT+'/DB_Script_Logs.txt', 'r') as original: data = original.read()
-    with open(ROOT+'/DB_Script_Logs.txt', 'w') as modified: modified.write(logs+"\n-----\n" + data)
+    add_logs(logs, fail_queries)
+    # with open(ROOT+'/DB_Script_Logs.txt', 'r') as original: data = original.read()
+    # with open(ROOT+'/DB_Script_Logs.txt', 'w') as modified: modified.write(logs+"\n-----\n" + data)
 
-    with open(ROOT+'/failure_queries.txt', 'w') as modified: modified.write(fail_queries)
+    # with open(ROOT+'/failure_queries.txt', 'w') as modified: modified.write(fail_queries)
 
 def execute_query(path):
     fail_queries=''
@@ -57,6 +58,12 @@ def execute_query(path):
     conn.close()
     return data, fail_queries
 
+def add_logs(new_logs, fail_queries):
+    with open(ROOT+'/DB_Script_Logs.txt', 'r') as original: old_logs = original.read()
+    with open(ROOT+'/DB_Script_Logs.txt', 'w') as modified: modified.write(new_logs+"\n-----\n" + old_logs)
+
+    with open(ROOT+'/failure_queries.txt', 'w') as modified: modified.write(fail_queries)
+
 def doQuery_base() :
     logs=''
     for service in services:
@@ -70,11 +77,12 @@ def doQuery_base() :
         # with open(sprint_delta_path, 'w') as original: original.truncate(0)
     # CONFIG.set("EXECUTE_SCRIPTS","services","")
     with open(CONFIG_FILE, 'w') as original: CONFIG.write(original)
-    with open(ROOT+'/DB_Script_Logs.txt', 'r') as original: data = original.read()
-    with open(ROOT+'/DB_Script_Logs.txt', 'w') as modified: modified.write(logs+"\n-----\n" + data)
+    # with open(ROOT+'/DB_Script_Logs.txt', 'r') as original: data = original.read()
+    # with open(ROOT+'/DB_Script_Logs.txt', 'w') as modified: modified.write(logs+"\n-----\n" + data)
 
-    with open(ROOT+'/failure_queries.txt', 'w') as modified: modified.write(fail_queries)
+    # with open(ROOT+'/failure_queries.txt', 'w') as modified: modified.write(fail_queries)
 
+    add_logs(logs, fail_queries)
 services = CONFIG.get("EXECUTE_SCRIPTS","services").split(',')
 script_type = CONFIG.get("EXECUTE_SCRIPTS","type")
 if script_type =='delta':
