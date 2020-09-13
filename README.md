@@ -60,7 +60,7 @@ pipeline {
     }
  ```
 
-**Follow below steps for the feature (Automatic execution of base schema DDL and DML scripts for defined microservices).**
+**Follow below steps for setup**
 - Create folder in root directory for all your micrtoservices.
 - Create below four files inside each microservice folder  
       -DDL.sql --> file for (CREATE, DROP, RENAME, ALTER etc) statements.  
@@ -83,5 +83,13 @@ shipping_service = 1.0
 
 - Follow below steps for setting webhook on GIT to auto trigger jenkins job on every push  
 [Set GIT Webhook](https://www.socketxp.com/webhookrelay/github-webhook-localhost-jenkins)
+
+**Upcoming Features**
+- Database Schema Backup.
+- Database DML backup of all tables except operational table.
+
+**Flow Diagram**
+
+![alt text](https://user-images.githubusercontent.com/24622641/93015619-80bf8e80-f5d8-11ea-8aab-876e1f5ed90c.JPG)!
 
 
