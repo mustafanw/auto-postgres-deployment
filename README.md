@@ -62,7 +62,7 @@ pipeline {
 
 **Follow below steps for the feature (Automatic execution of base schema DDL and DML scripts for defined microservices).**
 - Create folder in root directory for all your micrtoservices.
-- Create below four files inside each microservice folder
+- Create below four files inside each microservice folder  
       -DDL.sql --> file for (CREATE, DROP, RENAME, ALTER etc) statements.
       -DML.sql --> file for ( UPDATE, INSERT, MERGE etc) statements.
       -sprint_delta.sql --> You need to add all the delta scripts for the service version delta.
