@@ -27,7 +27,6 @@ def execute_query(path):
     query_data = data.replace("\n","")
     queries = query_data.split(";")
     queries.pop()
-    import pdb;pdb.set_trace()
     for query in queries:
         try:
             cur.execute(query)
