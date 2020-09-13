@@ -1,0 +1,8 @@
+Successfully Executed base script for account_service version 1.0 at 2020-09-14 00:01:08.138986
+Error while Executed base script for account_service version 1.0 at 2020-09-14 00:01:08.139003
+Successfully Executed base script for inventory_service version 1.0 at 2020-09-14 00:01:08.167785
+Error while Executed base script for inventory_service version 1.0 at 2020-09-14 00:01:08.167798
+Successfully Executed base script for shipping_service version 1.0 at 2020-09-14 00:01:08.197629
+Error while Executed base script for shipping_service version 1.0 at 2020-09-14 00:01:08.197642
+
+-----

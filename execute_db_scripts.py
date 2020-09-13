@@ -50,7 +50,7 @@ def run_base_script() :
         error_flag = 0
         for service in services:
             try:
-                version = CONFIG.get("EXECUTE_SCRIPTS",service)
+                version = CONFIG.get("EXECUTE_SCRIPTS",service+'_version')
                 ddl_path = ROOT+'/'+service+'/DDL.sql'
                 dml_path = ROOT+'/'+service+'/DML.sql'
                 data, fail_queries_ddl=execute_query(ddl_path,service, version)
@@ -77,7 +77,7 @@ def run_delta_script() :
         error_flag = 0
         for service in services:
             try:
-                version = CONFIG.get("EXECUTE_SCRIPTS",service)
+                version = CONFIG.get("EXECUTE_SCRIPTS",service+'_version')
                 sprint_delta_path = ROOT+'/'+service+'/sprint_delta.sql'
                 sprint_delta_data,failed_queries=execute_query(sprint_delta_path,service, version)
                 service_delta_path = ROOT+'/'+service+'/service_delta.sql'
