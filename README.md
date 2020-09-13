@@ -63,10 +63,10 @@ pipeline {
 **Follow below steps for setup**
 - Create folder in root directory for all your micrtoservices.
 - Create below four files inside each microservice folder  
-      -DDL.sql --> file for (CREATE, DROP, RENAME, ALTER etc) statements.  
-      -DML.sql --> file for ( UPDATE, INSERT, MERGE etc) statements.  
-      -sprint_delta.sql --> You need to add all the delta scripts for the service version delta.  
-      -service_delta.sql --> This file automatically tracks whole service delta scripts.  
+      - DDL.sql --> file for (CREATE, DROP, RENAME, ALTER etc) statements.  
+      - DML.sql --> file for ( UPDATE, INSERT, MERGE etc) statements.  
+      - sprint_delta.sql --> You need to add all the delta scripts for the service version delta.  
+      - service_delta.sql --> This file automatically tracks whole service delta scripts.  
       
 *Refer account_service, shipping_service,inventory_service folder for above files*
 - Define below four varibales in config.ini file
