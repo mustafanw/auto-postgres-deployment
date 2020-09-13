@@ -1,3 +1,4 @@
+
 CREATE schema inventory_service;
 
 CREATE TABLE inventory_service.products  (
