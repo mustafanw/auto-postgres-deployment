@@ -2,7 +2,10 @@
 # Automate Database Maintenance for Microservices with Jenkins
 ***This repository contains the code for maintaining the database script automatically with Jenkins for your microservices.***
 
-**Status:** Ongoing
+
+**Flow Diagram**
+
+![alt text](https://user-images.githubusercontent.com/24622641/93015619-80bf8e80-f5d8-11ea-8aab-876e1f5ed90c.JPG)!
 
 # Requirements
 **1. Python 3.5 +**
@@ -88,10 +91,6 @@ shipping_service = 1.0
 **Upcoming Features**
 - Database Schema Backup.
 - Database DML backup of all tables except operational table.
-
-**Flow Diagram**
-
-![alt text](https://user-images.githubusercontent.com/24622641/93015619-80bf8e80-f5d8-11ea-8aab-876e1f5ed90c.JPG)!
 
 **Benefits**
 
